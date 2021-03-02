@@ -2,9 +2,31 @@
 
 
 
-# Group DocsTestWeb.Books
-## DocsTestWeb.Books [/api/books]
-### DocsTestWeb.Books create [POST /api/books]
+# Group Books API
+## Books API [/api/books]
+### Books API index [GET /api/books]
+
+
++ Request index lists all books
+**GET**&nbsp;&nbsp;`/api/books`
+
+    + Headers
+    
+            accept: application/json
+
++ Response 200
+
+    + Headers
+    
+            content-type: application/json; charset=utf-8
+            cache-control: max-age=0, private, must-revalidate
+            x-request-id: FmhwxFBrR3DTbfAAAACC
+    + Body
+    
+            {
+              "data": []
+            }
+### Books API create [POST /api/books]
 
 
 + Request create books renders books when data is valid
@@ -28,36 +50,14 @@
     
             content-type: application/json; charset=utf-8
             cache-control: max-age=0, private, must-revalidate
-            x-request-id: FmhvnJdtjxLfB2QAAZGD
-            location: /api/books/80
+            x-request-id: FmhwxEn2tGzCC4oAAAYB
+            location: /api/books/122
     + Body
     
             {
               "data": {
                 "name": "some name",
-                "id": 80
+                "id": 122
               }
-            }
-### DocsTestWeb.Books index [GET /api/books]
-
-
-+ Request index lists all books
-**GET**&nbsp;&nbsp;`/api/books`
-
-    + Headers
-    
-            accept: application/json
-
-+ Response 200
-
-    + Headers
-    
-            content-type: application/json; charset=utf-8
-            cache-control: max-age=0, private, must-revalidate
-            x-request-id: FmhvnJbT4TtwGKAAAVah
-    + Body
-    
-            {
-              "data": []
             }
 
