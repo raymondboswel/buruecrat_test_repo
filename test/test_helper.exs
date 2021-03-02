@@ -2,10 +2,10 @@ ExUnit.start()
 Ecto.Adapters.SQL.Sandbox.mode(DocsTest.Repo, :manual)
 
 Bureaucrat.start(
-  writer: Bureaucrat.MarkdownWriter,
+  writer: Bureaucrat.ApiBlueprintWriter,
   default_path: "docs/API.apib",
   paths: [],
-  titles: [],
+  titles: [{DocsTestWeb.BooksController, "Books API"}],
   env_var: "DOC",
   json_library: Poison
 )

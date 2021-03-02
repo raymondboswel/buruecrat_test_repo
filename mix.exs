@@ -33,7 +33,7 @@ defmodule DocsTest.MixProject do
   # Type `mix help deps` for examples and options.
   defp deps do
     [
-      {:bureaucrat, "~> 0.2.7"},
+      {:bureaucrat, path: "../bureaucrat"},
       {:poison, "~> 3.1"},
       {:phoenix, "~> 1.5.8"},
       {:phoenix_ecto, "~> 4.1"},

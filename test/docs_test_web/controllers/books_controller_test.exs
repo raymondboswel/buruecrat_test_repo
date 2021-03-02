@@ -30,7 +30,7 @@ defmodule DocsTestWeb.BooksControllerTest do
 
   describe "create books" do
     test "renders books when data is valid", %{conn: conn} do
-      conn = post(conn, Routes.books_path(conn, :create), books: @create_attrs)
+      conn = post(conn, Routes.books_path(conn, :create), books: @create_attrs) |> doc
       assert %{"id" => id} = json_response(conn, 201)["data"]
 
       conn = get(conn, Routes.books_path(conn, :show, id))
